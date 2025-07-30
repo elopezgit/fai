@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAI - Fundación para Albergues Infantiles</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 to-blue-500 text-white sticky top-0 z-50 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <img src="img/images.png" alt="FAI Logo" class="h-12">
+      <nav class="hidden md:flex space-x-6">
+        <a href="#inicio" class="hover:underline">Inicio</a>
+        <a href="#quienes-somos" class="hover:underline">Quiénes Somos</a>
+        <a href="#programas" class="hover:underline">Programas</a>
+        <a href="#donar" class="hover:underline">Donar</a>
+        <a href="#contacto" class="hover:underline">Contacto</a>
+      </nav>
+      <button class="md:hidden text-white" onclick="toggleMenu()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-blue-900 text-white flex flex-col items-center space-y-4 py-4">
+      <a href="#inicio" class="hover:underline">Inicio</a>
+      <a href="#quienes-somos" class="hover:underline">Quiénes Somos</a>
+      <a href="#programas" class="hover:underline">Programas</a>
+      <a href="#donar" class="hover:underline">Donar</a>
+      <a href="#contacto" class="hover:underline">Contacto</a>
+    </div>
+  </header>
+
+  <section id="inicio" class="relative h-screen">
+  <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+    <source src="img/videoHogar.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+  <div class="absolute inset-0 bg-blue-900 bg-opacity-60 flex items-center justify-center">
+    <div class="text-center text-white animate-bounce-in relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">FAI: Un hogar para grandes chicos</h1>
+      <p class="text-lg mb-8 max-w-2xl mx-auto">Desde 1992, brindamos amor, educación y oportunidades a niños vulnerables en Tucumán.</p>
+      <div class="space-x-4">
+        <a href="#donar" class="btn-primary pulse">Quiero ayudar</a>
+        <a href="#quienes-somos" class="btn-secondary">Conocer más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA Banner -->
+  <section class="bg-yellow-400 text-blue-900 py-6">
+    <div class="container mx-auto px-4 text-center animate-zoom-in">
+      <p class="text-lg font-semibold">¡Sumate a FAI! Con tu apoyo, transformamos vidas y construimos un futuro mejor.</p>
+    </div>
+  </section>
+
+
+  <!-- Sección Impacto -->
+<section id="impacto" class="py-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12">Nuestro Impacto</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Card 1 -->
+      <div class="impact-card">
+        <div class="impact-number" data-target="11000">0</div>
+        <p class="impact-text">Niños ayudados</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="impact-card">
+        <div class="impact-number" data-target="700">0</div>
+        <p class="impact-text">Niños que pasaron por la casa hogar</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="impact-card">
+        <div class="impact-number" data-target="80">0</div>
+        <p class="impact-text">Niños todos los días en el centro comunitario</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="impact-card">
+        <div class="impact-number" data-target="100">0</div>
+        <p class="impact-text">Compromiso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sección Donar -->
+<section id="donar" class="py-16 bg-gradient-to-r from-blue-500 to-blue-900 text-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">Sumate a cambiar vidas</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto">
+      Con tu ayuda mensual, brindamos educación, alimentos y un hogar seguro a niños y jóvenes que más lo necesitan.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-8">
+      <!-- Botón 2000 -->
+      <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847ac5c717017ad0245e1e08df" target="_blank" 
+         class="donar-btn bg-yellow-400 text-blue-900">Suscribirme $500</a>
+      <!-- Botón 5000 -->
+      <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847ac5c248017ad023460c090d" target="_blank" 
+         class="donar-btn bg-yellow-400 text-blue-900">Suscribirme $2.000</a>
+      <!-- Botón 10000 -->
+      <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847ac5c717017ad021dde708d9" target="_blank" 
+         class="donar-btn bg-yellow-400 text-blue-900">Suscribirme $5.000</a>
+      <!-- Botón libre -->
+      <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847f50d578017f55084272008a" target="_blank" 
+         class="donar-btn bg-yellow-400 text-blue-900">Monto Libre</a>
+    </div>
+    <p class="text-sm opacity-80">¡Tu aporte mensual nos permite seguir transformando vidas todos los días!</p>
+  </div>
+</section>
+
+
+
+  <!-- Quiénes Somos -->
+  <section id="quienes-somos" class="py-16 bg-gradient-to-b from-white to-gray-100 animate-zoom-in">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="title-section text-blue-900">¿Quiénes Somos?</h2>
+      <p class="paragraph">FAI – Fundación para Albergues Infantiles es un hogar pequeño con grandes chicos. Desde 1992, en San Miguel de Tucumán, abrimos nuestras puertas a niños que enfrentan la hostilidad de la calle, ofreciéndoles amor, techo y oportunidades. Somos una organización sin fines de lucro que trabaja con niños, jóvenes y familias vulnerables para romper el círculo de pobreza a través de la educación, la capacitación y el apoyo integral.</p>
+      <p class="paragraph">Nuestra misión comenzó con un grupo de tucumanos que se preguntaron “¿qué podemos hacer?” y sigue viva gracias a nuestro equipo liderado por María Dolores Alfieri (Presidente), Silvia García Hamilton (Vicepresidente), Marta Cruz Prats (Secretaria), Maria Luisa Frias (Tesorera), María Lilia Peña y Maria Beatriz Larrabure (Vocales).</p>
+    </div>
+  </section>
+
+  <!-- Programas -->
+  <section id="programas" class="py-16 bg-gray-100 animate-zoom-in">
+    <div class="container mx-auto px-4">
+      <h2 class="title-section text-yellow-400">Nuestros Programas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Card 1 -->
+        <div class="card hover-dramatic">
+          <img src="img/casahogar.png" alt="Casa Hogar" class="mx-auto mb-4">
+          <h3 class="card-title text-blue-900">Casa Hogar - San Miguel de Tucumán</h3>
+          <p class="card-text">Un hogar donde los chicos viven de lunes a viernes, asisten a la escuela y participan en talleres de informática, carpintería, zapatería, tarjetería, apoyo escolar y deportes. Los fines de semana regresan con sus familias.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="card hover-dramatic">
+          <img src="img/centrocomunitario.jfif" alt="Centro Comunitario" class="mx-auto mb-4">
+          <h3 class="card-title text-blue-900">Centro Comunitario - Lules</h3>
+          <p class="card-text">“El Oratorio de San Antonio” alimenta a más de 80 niños y adolescentes diariamente, ofrece apoyo escolar, talleres y una huerta comunitaria coordinada con Fundación Citric y el INTA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (Donaciones, Testimonios y Contacto igual que en el original, solo con clases y estilos simplificados) -->
+
+
+
+
+   <section id="redes" class="py-12 bg-gradient-to-r from-blue-500 to-blue-900 text-white text-center">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8">¡Seguinos en Redes!</h2>
+    <div class="flex flex-col md:flex-row justify-center gap-4">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/faituc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" 
+         class="social-btn bg-pink-500 hover:bg-pink-600">Instagram</a>
+      <!-- WhatsApp -->
+      <a href="https://wa.me/+543814203333" target="_blank" 
+         class="social-btn bg-green-500 hover:bg-green-600">WhatsApp</a>
+      <!-- Facebook -->
+      <a href="https://www.facebook.com/profile.php?id=100008520840018&sk=about" target="_blank" 
+         class="social-btn bg-blue-700 hover:bg-blue-800">Facebook</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Sección Cómo Ayudar -->
+<section id="como-ayudar" class="py-16 bg-white">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-12">¿Cómo Ayudar?</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Card Padrinos -->
+      <div class="help-card">
+        <div class="flex justify-center mb-4">
+          <!-- Ícono corazón solidario -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 21c-4.97-4.97-8-8-8-11a4 4 0 018 0c0-1.11.45-2.16 1.25-2.94A4 4 0 0120 10c0 3-3.03 6.03-8 11z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-4">Padrinos</h3>
+        <p class="text-gray-700 mb-6">Apoyá la obra de FAI con tu aporte mensual:</p>
+        <div class="flex flex-col gap-3">
+          <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847ac5c717017ad0245e1e08df" target="_blank" class="donar-btn bg-yellow-400 text-blue-900">Suscribirme $500</a>
+          <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847ac5c248017ad023460c090d" target="_blank" class="donar-btn bg-yellow-400 text-blue-900">Suscribirme $2.000</a>
+          <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847ac5c717017ad021dde708d9" target="_blank" class="donar-btn bg-yellow-400 text-blue-900">Suscribirme $5.000</a>
+          <a href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380847f50d578017f55084272008a" target="_blank" class="donar-btn bg-yellow-400 text-blue-900">Otro monto</a>
+        </div>
+      </div>
+
+      <!-- Card Donaciones -->
+      <div class="help-card">
+        <div class="flex justify-center mb-4">
+          <!-- Ícono caja donaciones -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M3 7l9-4 9 4-9 4-9-4z" />
+            <path d="M3 7v10l9 4 9-4V7" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Donaciones</h3>
+        <p class="text-gray-700 mb-4">Apoyá la obra de FAI con:</p>
+        <ul class="text-gray-700 space-y-1">
+          <li>Mercadería</li>
+          <li>Útiles escolares</li>
+          <li>Dinero</li>
+        </ul>
+      </div>
+
+      <!-- Card Colaboradores -->
+      <div class="help-card">
+        <div class="flex justify-center mb-4">
+          <!-- Ícono manos colaborativas -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M5 12v-2a5 5 0 1110 0v2m-6 0v2a5 5 0 0010 0v-2m-2 4v2a5 5 0 01-10 0v-2" />
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Colaboradores</h3>
+        <p class="text-gray-700">Apoyá la obra de FAI con tu tiempo. Súmate a alguna de nuestras actividades.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Sección Contacto -->
+<section id="contacto" class="py-16 bg-gray-100">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-8 text-center">Contacto</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Información -->
+      <div>
+        <p class="text-lg text-gray-700 mb-6">¿Querés saber más o colaborar? ¡Escribinos o visitanos!</p>
+        <div class="space-y-4">
+          <p><strong>Teléfono:</strong> +54 381 4203333</p>
+          <p><strong>Email:</strong> faituc@hotmail.com</p>
+          <p><strong>Dirección:</strong> Buenos Aires 855, San Miguel de Tucumán</p>
+          <p><strong>Horario:</strong> Lunes a Viernes 9:00 - 18:00 hs</p>
+          <a href="https://wa.me/+543814203333" target="_blank" 
+             class="inline-block bg-green-500 text-white px-6 py-3 rounded-full hover:bg-green-600 transition">
+            Chatear por WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="bg-white p-6 rounded-lg shadow-lg">
+        <h3 class="text-xl font-semibold text-blue-900 mb-4">Envíanos un mensaje</h3>
+        <form action="#" method="POST" class="space-y-4">
+          <input type="text" name="nombre" placeholder="Nombre" class="w-full p-3 border rounded-lg" required>
+          <input type="email" name="email" placeholder="Correo" class="w-full p-3 border rounded-lg" required>
+          <textarea name="mensaje" placeholder="Mensaje" class="w-full p-3 border rounded-lg h-32" required></textarea>
+          <button type="submit" class="w-full bg-blue-900 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+            Enviar
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 FAI – Fundación para Albergues Infantiles. Todos los derechos reservados. -  Esteban López</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

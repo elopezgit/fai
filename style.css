@@ -1,0 +1,293 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 1.8s ease-out;
+}
+
+@keyframes bounceIn {
+  0% { opacity: 0; transform: translateY(-120px) scale(0.7); }
+  60% { opacity: 1; transform: translateY(40px) scale(1.2); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.animate-zoom-in {
+  opacity: 0;
+  transform: scale(0.7) rotate(-5deg);
+  transition: all 1s ease-out;
+}
+
+.animate-zoom-in.visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.hover-dramatic {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hover-dramatic:hover {
+  transform: scale(1.2) rotate(5deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.impact-counter {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FBBF24;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #FBBF24;
+  color: #1e3a8a;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+
+.title-section {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Fuerza las cards a tener la misma altura */
+.card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 420px; /* Altura mínima uniforme */
+}
+
+/* Ajusta las imágenes */
+.card img {
+  width: 100%;
+  max-width: 200px;   /* ancho máximo */
+  height: 150px;      /* altura fija */
+  object-fit: contain; /* mantiene proporción sin recortar */
+  margin: 0 auto;
+}
+
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #4B5563;
+}
+
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+.donar-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.donar-btn:hover {
+  background-color: #f59e0b; /* un amarillo más intenso */
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.impact-card {
+  background: #f9fafb;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.impact-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.impact-text {
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+/* Cards responsive */
+@media (max-width: 768px) {
+  .card {
+    min-height: auto;
+    padding: 1rem;
+  }
+
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.social-btn {
+  width: 100%;
+  max-width: 280px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  h2, .title-section {
+    font-size: 1.8rem;
+  }
+
+  .impact-number {
+    font-size: 2rem;
+  }
+
+  .donar-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
+
+
+/* Botones sociales */
+.social-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  color: white;
+  text-align: center;
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  /* Cards */
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  .card {
+    min-height: auto;
+    padding: 1rem;
+  }
+  /* Donar botones */
+  .donar-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+  /* Redes sociales */
+  .social-btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  /* Títulos más chicos */
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 2rem 1rem;
+  }
+}
+
+
+/* Ajustes para el formulario */
+input, textarea {
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid #1e3a8a; /* Azul */
+}
+
+
+.donar-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.donar-btn:hover {
+  background-color: #f59e0b;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+.help-card svg {
+  transition: transform 0.3s ease;
+}
+.help-card:hover svg {
+  transform: scale(1.15);
+}
